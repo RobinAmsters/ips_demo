@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- 
+	Launch file to initialize communication with the Turtlebot 2, pozyx receiver and marvelmind hedgehogs
+	Should be run on the Raspberry Pi
+-->
+
+<!-- Optional arguments -->
+
+<!-- Includes -->
+<include file="$(find turtlebot_bringup)/launch/minimal.launch"/> 
+<include file="$(find ips_demo)/launch/pozyx_demo.launch"/> 
+
+<!-- Nodes -->
+
+<node pkg="marvelmind_nav" type="hedge_rcv_bin" name="marvelmind_hedgehog_tracker"  args="/dev/ttyACM0">
+</node>
+
+<!-- Parameters -->
+
+  	
+</launch>
