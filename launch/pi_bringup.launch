@@ -10,9 +10,10 @@
 <arg name="marvelmind_port" default="ttyACM0" doc="Serial port for marvelmind"/>
 <arg name="pozyx_port" default="ttyAMA0" doc="Serial port for pozyx"/>
 
-<!-- Includes -->
-<include file="$(find turtlebot_bringup)/launch/minimal.launch"/> 
+<!-- Includes 
+<include file="$(find turtlebot_bringup)/launch/minimal.launch"/> -->
 <include file="$(find ips_demo)/launch/pozyx_demo.launch"/> 
+<include file="$(find vlp)/launch/pi_bringup.launch"/> 
 
 <!-- Nodes -->
 
