@@ -7,7 +7,8 @@
 -->
 
 <!-- Optional arguments -->
-<arg name="m_port" default="ttyACM0" doc="Serial port for marvelmind"/>
+<arg name="marvelmind_port" default="ttyACM0" doc="Serial port for marvelmind"/>
+<arg name="pozyx_port" default="ttyAMA0" doc="Serial port for pozyx"/>
 
 <!-- Includes -->
 <include file="$(find turtlebot_bringup)/launch/minimal.launch"/> 
@@ -15,10 +16,11 @@
 
 <!-- Nodes -->
 
-<node pkg="marvelmind_nav" type="hedge_rcv_bin" name="marvelmind_hedgehog_tracker"  args="/dev/$(arg m_port)">
+<node pkg="marvelmind_nav" type="hedge_rcv_bin" name="marvelmind_hedgehog_tracker"  args="/dev/$(arg marvelmind_port)">
 </node>
 
 <!-- Parameters -->
+<param name="pozyx_port" value="/dev/$(arg pozyx_port)"/>
 
   	
 </launch>
