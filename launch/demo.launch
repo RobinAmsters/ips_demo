@@ -10,7 +10,7 @@
 <arg name="rviz" default="False" doc="Vizualize results in rviz"/>
 
 <!-- Include other files -->
-<include file="$(find turtlebot_teleop)/launch/ps3_teleop.launch"/>
+<include file="$(find turtlebot_teleop)/launch/keyboard_teleop.launch"/>
 
 <!-- Parameters -->
 <rosparam command="load" file="$(find vlp)/yaml/vlp_params.yaml" />
