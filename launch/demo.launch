@@ -2,12 +2,15 @@
 <!-- 
   main launch file for IPS testbed demo setup
   launches nodes for marvelmind, pozyx and vlp
+
+<param name="robot_description" command="$(find xacro)/xacro.py '$(find uvlp)/urdf/kobuki_uvlp.urdf.xacro'"/>
 -->
 
 <launch>
 
 <!-- Optional arguments -->
 <arg name="rviz" default="False" doc="Vizualize results in rviz"/>
+<arg name="record" default="False" doc="Record results in a bag file"/>
 
 <!-- Include other files -->
 <include file="$(find turtlebot_teleop)/launch/keyboard_teleop.launch"/>
@@ -18,6 +21,11 @@
 
 <!-- Nodes -->
 <node pkg="ips_demo" type="marvelmind_tf.py" name="marvelmind_tf" required="false" output="screen" /> 
+<node pkg="vlp" type="vlp_KF.py" name="vlp_KF" output="screen"/>
+
+<group if="$(arg record)">
+	<node pkg="rosbag" type="record" name="rosbag_record_standard_data" respawn="true" output="screen" args="-a -o $(find ips_demo)/bag/" /> 
+</group>
 
 <group if="$(arg rviz)">
 	<node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find ips_demo)/rviz/ips_demo.rviz" />

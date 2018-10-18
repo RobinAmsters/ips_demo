@@ -10,15 +10,15 @@
     	<param name="height" value="1500" />
     	<param name="frequency" value="10" />
 
-	<param name="anchor0_id" value="0x6744" />
+	<param name="anchor0_id" value="0x6745" />
 	<param name="anchor1_id" value="0x6765" />
-	<param name="anchor2_id" value="0x6745" />
-	<param name="anchor3_id" value="0x6733" />
+	<param name="anchor2_id" value="0x6733" />
+	<param name="anchor3_id" value="0x6744" />
 
-    	<param name="anchor0_coordinates" value="0, 0, 0" />
-    	<param name="anchor1_coordinates" value="0, 2000, 0" />  <!--1577-->
-    	<param name="anchor2_coordinates" value="1500, 2000, 0" />
-    	<param name="anchor3_coordinates" value="1500, 0, 0" />
+    	<param name="anchor0_coordinates" value="0, 0, 1535" />
+    	<param name="anchor1_coordinates" value="1785, 0, 1535" />  <!--1577-->
+    	<param name="anchor2_coordinates" value="0, 1625, 1535" />
+    	<param name="anchor3_coordinates" value="1785, 1625, 1535" />
     </node>
 
 </launch>
