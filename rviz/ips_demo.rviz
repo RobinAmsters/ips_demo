@@ -11,6 +11,7 @@ Panels:
         - /TF1/Tree1
         - /Marker1
         - /Marker1/Namespaces1
+        - /RobotModel2
       Splitter Ratio: 0.813953459
     Tree Height: 815
   - Class: rviz/Selection
@@ -84,8 +85,6 @@ Visualization Manager:
           Value: false
         gyro_link:
           Value: false
-        marvelmind:
-          Value: true
         mount_asus_xtion_pro_link:
           Value: false
         odom:
@@ -129,6 +128,10 @@ Visualization Manager:
         pole_top_3_link:
           Value: false
         pozyx:
+          Value: true
+        vlp:
+          Value: true
+        vlp_fused:
           Value: true
         wheel_left_link:
           Value: false
@@ -207,9 +210,11 @@ Visualization Manager:
                 {}
               wheel_right_link:
                 {}
-          marvelmind:
-            {}
           pozyx:
+            {}
+          vlp:
+            {}
+          vlp_fused:
             {}
       Update Interval: 0
       Value: true
@@ -403,6 +408,27 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        odom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: LED
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -428,7 +454,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10.1186228
+      Distance: 6.41317225
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1

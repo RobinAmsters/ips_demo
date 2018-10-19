@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot name="LED">
+<link name="odom">
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="white">
+         <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0.0 0.0 1.53"/>
+    </visual>
+
+
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="white">
+         <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0.0 1.625 1.535"/>
+    </visual>
+
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="white">
+         <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="1.785 0.0 1.535"/>
+    </visual>
+
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="white">
+         <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="1.785 1.625 1.535"/>
+    </visual>
+
+
+  </link>
+</robot>
